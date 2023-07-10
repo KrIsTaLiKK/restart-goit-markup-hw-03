@@ -125,10 +125,7 @@ body {
 .header-list {
   display: flex;
   margin-left: 76px;
-}
-
-.header-list > .item:not(:last-child) {
-  margin-right: 40px;
+  gap: 24px;
 }
 
 .address-list {
@@ -188,6 +185,19 @@ body {
 
 /* =============== Our ADVANTAGES =============== */
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .third-title {
   margin-bottom: 8px;
 
@@ -206,7 +216,6 @@ body {
 
 .advantages-list {
   display: flex;
-  align-items: center;
 }
 
 .advantages-list > .item {
@@ -240,7 +249,7 @@ body {
 }
 
 .doing-list > .item {
-  width: 360px;
+  flex-basis: calc((100% - 48px) / 3);
   border: 1px solid var(--color-cornflower);
 }
 
@@ -256,7 +265,6 @@ body {
 
 .team-list {
   display: flex;
-  text-align: center;
 }
 
 .team-list > .item {
@@ -272,6 +280,7 @@ body {
   padding-right: 16px;
   padding-bottom: 32px;
   padding-left: 16px;
+  text-align: center;
 
   border-radius: 0px 0px 4px 4px;
   background: var(--color-white);
@@ -307,7 +316,24 @@ body {
 
 /* Filter buttons */
 
+.portfolio {
+  padding-top: 96px;
+}
+
+.filter-list {
+  display: flex;
+  margin-bottom: 72px;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
 .filter-btn {
+  padding-top: 12px;
+  padding-right: 24px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.64px;
@@ -324,6 +350,37 @@ body {
   background-color: var(--color-ocean);
 }
 
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+
+.portfolio-list > .item {
+  flex-basis: calc((100% - 48px) / 3);
+}
+/* ===== Can use instead gap ===== */
+
+/* .portfolio-list > .item {
+  margin-right: 24px;
+  margin-bottom: 48px;
+}
+
+.portfolio-list > .item:nth-child(3n) {
+  margin-right: 0px;
+  margin-bottom: 0px;
+} */
+
 .portfolio-text {
   color: var(--color-slate);
+}
+
+.portfolio-img-text {
+  padding-top: 32px;
+  padding-right: 16px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  border: 1px solid var(--color-cornflower);
+  border-top: 0;
+  background: var(--color-white);
 }
